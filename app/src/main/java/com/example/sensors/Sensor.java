@@ -25,12 +25,21 @@ public class Sensor extends Activity {
 
 //        textview.setText(deviceSensors.toString());
 
-        printSensors();
+//        printSensors();
+        specificSensor();
     }
 
-    private void printSensors() {
-        for(android.hardware.Sensor sensor : deviceSensors){
-            textview.setText(textview.getText()+"\n" + sensor.getName());
+    private void specificSensor() {
+        if(sensorManager.getDefaultSensor(android.hardware.Sensor.TYPE_MAGNETIC_FIELD) != null){
+            textview.setText("This device has a magnetic field sensor");
+        }else{
+            textview.setText("this device does not have this specific sensor feature");
         }
     }
+
+//    private void printSensors() {
+//        for(android.hardware.Sensor sensor : deviceSensors){
+//            textview.setText(textview.getText()+"\n" + sensor.getName());
+//        }
+//    }
 }
