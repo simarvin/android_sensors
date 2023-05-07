@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-
+//THIS PAGE IS TO LIST ALL THE AVAILABLE SENSORS TO A CERTAIN ANDROID DEVICE
 public class Sensor extends Activity {
     private TextView textview;
     private SensorManager sensorManager;
